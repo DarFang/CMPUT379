@@ -1,0 +1,12 @@
+Assignment 2 requires us to utilize threads and synchronize them. Specifically the main function acting as a producer, and threads acting as consumers. The Producer will take in a line called "Tn" where n is a number and put it onto a queue. The Consumer will take the "Tn" on the queue and execute for n time. There is another input called "Sn" where it will sleep the producer. Once there is no more work, the producer will try and flush every thread to their end state by signaling the mutex unlock command.
+
+Restrictions: If the queue is empty the Consumer will have to wait. The queue is full when the size of queue is 2 times the number of spawned threads. The program will work even if the input work is lower than the thread count. 
+
+Files: makefile, prodcon.cpp, outputfile.cpp, prodcon.h, TranSleep.cpp, README, inputexample
+prodcon.cpp consists of the main functon and the threads, and it executes like the pseudo code above.
+outputfile.cpp consists of the string to output the log summary. It contains a few templates and uses mutex lock so it does not jumble any of the output.
+TranSleep.cpp consists of Trans and Sleep for the producer, taken in by "Tn" and "Sn", it is not my file
+inputexample was given as an example file to test, you can manipulate the file to see how it changes the ouput
+
+How to run: On the bash, run the command "make". to run the specific arguments, run "./prodcon n m < fileName" where n is the thread numbner, m is the log file name, and fileName being the input. If no m is specified, then the log file will be saved as "prodcon.log". inputexample can be used as an example of the input. An example of the input is "./prodcon 3 1 < inputexample" and it will save to "prodcon.1.log", spawn 3 threads, and input the file "inputexample".
+The log will consists of the work, recieved, and completed from the Consumer ID and Producer, and lastly there is a summary of total work, recieved, and completed, and a count per thread on their completion.

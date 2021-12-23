@@ -1,0 +1,18 @@
+.\" Manpage for client.
+.TH man 1 "Dec 1 2021" "1.0" "server man page"
+.SH NAME
+client \- creates a client
+.SH SYNOPSIS
+client [port] [ip-address]
+.SH DESCRIPTION
+The client has 2 commands where it sends transations with T<n> and sleep for n units with S<n>.
+.SH OPTIONS
+no other options currently
+.SH FILES
+none
+.SH SEE ALSO
+none
+.SH BUGS
+no known bugs.
+.SH AUTHOR
+Darius Fang dfang1@ualbeta.ca

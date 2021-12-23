@@ -1,0 +1,20 @@
+Assignment 3 required to make a server and client. The client has 2 commands wehre it sends transations with T<n> ad sleep for n units with S<n>.
+The server is to recieve messages with T<n>, processes them and returns D<J> where J is the job finished. Both the server and the client are to keep track of every action to recieve and send bewteen client and server. The server itself has a summary of the total transactions coming from multiple clients. The logs will be saved to Server for the server and then the pid of the client with the host name ("hostname.pid").
+
+Restrictions: The server can only hold 10 client in total to connect, but it can hold more clients transaction infromation if some client start to disconnect and other clients reconnect. If you do not send either a S<n> or T<n> on the client, it will send nothing. I am also assumming n is a positive number from 0 to 100. I also assuming that there is no space between T and the number inputed by either the user or a input file.
+
+Files: makefile, TranSleep.cpp client.cpp server.cpp inputtest1 comm.h README server.man client.man
+TranSleep.cpp is not my file and is given by our instructer. It consists of sleep and tran used for this assingment
+client.cpp consists of somefunctions and main for the client. The main funciton runs the whole program and the other functions are for outputing log to a file.
+server.cpp consists of some functions and main for the server. The main function run the whole program and the other functions are for output log to a file.
+inputtest1 this is just an example of the input for a client file
+comm.h this used to store the libraries used for the programs
+README this is just a brief explanation fo the program, restrictions and how to run
+server.man just a manpage on server
+client.man just a manpage on client
+
+How to run: On the bash, run the command "make". to run the specific arguments, run "./server port" where port is the port number. Then run as many clients as you want with "./client port serverip", where port is the port number, serverip is the ip of the server spawned. There is also a input file example you can use with the client called inputtest1. To run the file with the program, you type "./client port serverip <inputest1". Again to read the logs, there will be a Server file and hostname.pid file for client. If you are not using a input file for the client, to close the client you can to press ctrl d. This will shut down the "file read/write" to the server.
+
+"make clean" will remove the object files
+
+to spawn the man pages, type "make man"

@@ -1,0 +1,18 @@
+.\" Manpage for server.
+.TH man 1 "Dec 1 2021" "1.0" "server man page"
+.SH NAME
+server \- creates a server
+.SH SYNOPSIS
+server [port]
+.SH DESCRIPTION
+The server is to recieve messages with T<n>, processes them and returns D<J> where J is the job finished.
+.SH OPTIONS
+no other options currently
+.SH FILES
+none
+.SH SEE ALSO
+none
+.SH BUGS
+no known bugs.
+.SH AUTHOR
+Darius Fang dfang1@ualbeta.ca
